@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --color-dark-blue: #3e52a3;
+    --color-orange: #e38826;
+    --color-cyan: #006970;
+    --color-dark-cyan: #004241;
+    --color-light-grey: #f2f2f2;
+    
+    --font-lexend: 'Lexend Deca';
+    --font-big-shoulders: 'Big Shoulders Display';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    width: 950px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sedans,
+.suvs,
+.luxury {
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+    padding: 1% 5.1% 1% 4.2%;
+    gap: 30px;
+    background-color: var(--color-orange);
+}
+
+.sedans {
+    border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+    background-color: var(--color-cyan);
+}
+
+.luxury {
+    background-color: var(--color-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.sedans > img,
+.suvs > img,
+.luxury > img {
+    padding-top: 30px;
+    width: 60px;
+}
+
+.sedans > h2,
+.suvs > h2,
+.luxury > h2 {
+    font-family: var(--font-big-shoulders);
+    color: var(--color-light-grey);
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.sedans > p,
+.suvs > p,
+.luxury > p {
+    font-family: var(--font-lexend);
+    color: var(--color-light-grey);
+    line-height: 1.8em;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.sedans > a,
+.suvs > a,
+.luxury > a {
+    border: 1px solid var(--color-light-grey);
+    background-color: var(--color-light-grey);
+    font-family: var(--font-lexend);
+    font-size: .9em;
+    padding: 15px;
+    margin-top: 40px;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 60px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.sedans > a:hover,
+.suvs > a:hover,
+.luxury > a:hover {
+    background-color: transparent;
+    color: var(--color-light-grey);
+}
+
+.sedans > a {
+    color: var(--color-orange);
+}
+
+.suvs > a {
+    color: var(--color-cyan);
+}
+
+.luxury > a {
+    color: var(--color-dark-cyan);
+}
+
+footer {
+    text-align: center;
+    font-family: var(--font-big-shoulders);
+    font-size: 1.3em;
+    padding: 0 0 10px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: var(--color-dark-cyan);
+    font-weight: 700;
+}
+
+footer > a:hover {
+    color: var(--color-dark-blue);
+    text-decoration: underline;
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        height: auto;
+    }
+    
+    main {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .sedans,
+    .suvs,
+    .luxury {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 80px 130px 50px 100px;
+        gap: 50px;
+    }
+
+    .sedans {
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .luxury {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .sedans > img,
+    .suvs > img,
+    .luxury > img {
+        padding-top: 10px;
+        width: 150px;
+    }
+
+    .sedans > h2,
+    .suvs > h2,
+    .luxury > h2 {
+        font-size: 5em;
+    }
+
+    .sedans > p,
+    .suvs > p,
+    .luxury > p {
+        line-height: 1.8em;
+        font-size: 2.3em;
+        font-weight: 300;
+    }
+
+    .sedans > a,
+    .suvs > a,
+    .luxury > a {
+        font-size: 1.9em;
+        padding: 30px;
+        margin-top: 50px;
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 2.4em;
+        padding: 0 0 40px;
+    }
+}
